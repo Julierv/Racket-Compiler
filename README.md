@@ -1,6 +1,6 @@
 ## Racket Compiler
 
-This repository contains a simple compiler and for a custom programming language implemented in Racket for the semester project of my design and implementation of Programming Languages course CMSC430.
+This repository contains a simple compiler and for a custom programming language implemented in Racket for the semester project of my design and implementation of Programming Languages course CMSC430. The compiler attemps to imitate the Racket compiler almost identically with some modifications like adding recursion to let in let-rec, all implemented in assembly x86. My roll in the project was implementing the Parsing, Checking, and Generating the code into asembly x86, the link files were probided by the course instructor.
 
 ## Abstract Syntax Tree (AST) Configuration
 
@@ -49,7 +49,6 @@ cond-clause	 	=	 	[test-expr then-body ...+]<br>
 `> (cond`<br>
 `    [else 5])`<br>
 `5`<br>
-
 `> (cond<br>`<br>
 `   [(positive? -5) (error "doesn't get here")]`<br>
 `   [(zero? -5) (error "doesn't get here, either")]`<br>
@@ -61,10 +60,35 @@ cond-clause	 	=	 	[test-expr then-body ...+]<br>
 case-clause	 	=	 	[(datum ...) then-body ...+]<br>
  	 	|	 	[else then-body ...+]<br>
 
+`> (case (+ 7 5)`<br>
+`   [(1 2 3) 'small]`<br>
+`   [(10 11 12) 'big])`<br>
+`'big`<br>
+`> (case (- 7 5)`<br>
+`   [(1 2 3) 'small]`<br>
+`   [(10 11 12) 'big])`<br>
+`'small`<br>
+
 ## if
 (if test-expr then-expr else-expr) <br>
+
+`> (if (positive? -5) (error "doesn't get here") 2)`<br>
+`2`<br>
+`> (if (positive? 5) 1 (error "doesn't get here"))`<br>
+`1`<br>
+`> (if 'we-have-no-bananas "yes" "no")`<br>
+`"yes"`<br>
 
 ## let
 (let ([id val-expr] ...) body ...+) <br>
 
 (let proc-id ([id init-expr] ...) body ...+) <br>
+
+`> (let ([x 5]) x)`<br>
+`5`<br>
+`> (let ([x 5])`<br>
+`    (let ([x 2]`<br>
+`          [y x])`<br>
+`      (list y x)))`<br>
+`'(5 2)`<br>
+
