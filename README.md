@@ -44,16 +44,17 @@ cond-clause	 	=	 	[test-expr then-body ...+]<br>
  	 	|	 	[test-expr => proc-expr]<br>
  	 	|	 	[test-expr]<br>
 <br>
-`> (cond)<br>
-> (cond<br>
-    [else 5])<br>
+
+`> (cond)<br>`
+`> (cond<br>`
+`    [else 5])<br>`
 5<br>
 
 > (cond<br>
    [(positive? -5) (error "doesn't get here")]<br>
    [(zero? -5) (error "doesn't get here, either")]<br>
    [(positive? 5) 'here])<br>
-'here`
+'here
 
 ## case
 (case val-expr case-clause ...) <br>
