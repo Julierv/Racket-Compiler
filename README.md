@@ -1,4 +1,5 @@
-Racket Compiler
+## Racket Compiler
+
 This repository contains a simple compiler and for a custom programming language implemented in Racket for the semester project of my design and implementation of Programming Languages course CMSC430.
 
 Abstract Syntax Tree (AST) Configuration<br>
