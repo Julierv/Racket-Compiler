@@ -34,3 +34,25 @@ Op0: 'read-byte<br>
 Op1: 'add1 | 'sub1 | 'zero? | 'char? | 'integer->char | 'char->integer | 'write-byte | 'eof-object? | 'box | 'car | 'cdr | 'unbox | 'empty? | 'cons? | 'box? | 'vector? | vector-length | 'string? | string-length<br>
 Op2: '+ | '- | '< | '= | 'cons | 'eq? | 'make-vector | 'vector-ref | 'make-string | 'string-ref<br>
 Op3: 'vector-set!<br>
+
+## Example syntax
+
+## cond
+(cond cond-clause ...) <br>
+cond-clause	 	=	 	[test-expr then-body ...+]<br>
+ 	 	|	 	[else then-body ...+]<br>
+ 	 	|	 	[test-expr => proc-expr]<br>
+ 	 	|	 	[test-expr]<br>
+
+## case
+(case val-expr case-clause ...) <br>
+case-clause	 	=	 	[(datum ...) then-body ...+]<br>
+ 	 	|	 	[else then-body ...+]<br>
+
+## if
+(if test-expr then-expr else-expr) <br>
+
+## let
+(let ([id val-expr] ...) body ...+) <br>
+
+(let proc-id ([id init-expr] ...) body ...+) <br>
