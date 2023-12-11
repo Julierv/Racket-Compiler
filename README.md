@@ -1,13 +1,13 @@
 Racket Compiler
-This repository contains the compiler created for my final project in CMSC430, implemented using Racket.
+This repository contains a simple compiler and for a custom programming language implemented in Racket for the semester project of my design and implementation of Programming Languages course CMSC430.
 
-Abstract Syntax Tree (AST) Configuration
-Fun
-(FunPlain [Listof Id] Expr)
-(FunRest [Listof Id] Id Expr)
-(FunCase [Listof FunCaseClause])
-FunCaseClause
-(FunPlain [Listof Id] Expr)
+Abstract Syntax Tree (AST) Configuration<br>
+Fun<br>
+(FunPlain [Listof Id] Expr)<br>
+(FunRest [Listof Id] Id Expr)<br>
+(FunCase [Listof FunCaseClause])<br>
+FunCaseClause<br>
+(FunPlain [Listof Id] Expr)<br>
 (FunRest [Listof Id] Id Expr)
 Expr
 (Eof)
