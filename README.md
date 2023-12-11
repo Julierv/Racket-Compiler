@@ -3,7 +3,7 @@
 This repository contains a simple compiler and for a custom programming language implemented in Racket for the semester project of my design and implementation of Programming Languages course CMSC430. The compiler attemps to imitate the Racket compiler almost identically with some modifications like adding recursion to let in let-rec, all implemented in assembly x86. My roll in the project was implementing the Parsing, Checking, and Generating the code into asembly x86, the link files were probided by the course instructor.
 
 - [Examples](#Examples)
-- [Abstract Syntax Tree (AST) Configuration](#AbstractSyntaxTree(AST)Configuration)
+- [Abstract Syntax Tree (AST) Configuration](#abstractsyntaxtree(ast)configuration)
 
 ## Examples
 
