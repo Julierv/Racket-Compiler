@@ -1,6 +1,6 @@
 ## Racket Compiler
 
-This repository contains a simple compiler for a custom programming language implemented in Racket. It was developed as the semester project for my Design and Implementation of Programming Languages course (CMSC430). The compiler attempts to closely mimic the behavior of the Racket compiler, with certain modifications such as adding recursion to `let` in `let-rec`. The entire implementation is in assembly x86. My roll in the project involved implementing the Parsing, Checking, and Code Generation phases, with the necessary link files provided by the course instructor.
+This repository contains a simple compiler for a custom programming language implemented in Racket. It was developed as the semester project for my Design and Implementation of Programming Languages course (CMSC430). The compiler attempts to closely mimic the behavior and return values of the Racket compiler, with some new modifications such as adding recursion to `let` in `let-rec`. The entire implementation of the compiler is written in assembly x86. My roll in the project involved implementing the Parsing, Checking, and Code Generation phases, with the necessary link files provided by the course instructor.
 
 - [Examples](#examples)
 - [Abstract Syntax Tree (AST) Configuration](#abstract-syntax-tree-ast-configuration)
