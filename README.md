@@ -2,40 +2,10 @@
 
 This repository contains a simple compiler and for a custom programming language implemented in Racket for the semester project of my design and implementation of Programming Languages course CMSC430. The compiler attemps to imitate the Racket compiler almost identically with some modifications like adding recursion to let in let-rec, all implemented in assembly x86. My roll in the project was implementing the Parsing, Checking, and Generating the code into asembly x86, the link files were probided by the course instructor.
 
-## Abstract Syntax Tree (AST) Configuration
+- [Examples](#Examples)
+- [Abstract Syntax Tree (AST) Configuration](#AbstractSyntaxTree(AST)Configuration)
 
-Fun<br>
-(FunPlain [Listof Id] Expr)<br>
-(FunRest [Listof Id] Id Expr)<br>
-(FunCase [Listof FunCaseClause])<br>
-FunCaseClause<br>
-(FunPlain [Listof Id] Expr)<br>
-(FunRest [Listof Id] Id Expr)<br>
-Expr<br>
-(Eof)<br>
-(Empty)<br>
-(Int Integer)<br>
-(Bool Boolean)<br>
-(Char Character)<br>
-(Str String)<br>
-(Prim0 Op0)<br>
-(Prim1 Op1 Expr)<br>
-(Prim2 Op2 Expr Expr)<br>
-(Prim3 Op3 Expr Expr Expr)<br>
-(If Expr Expr Expr)<br>
-(Begin Expr Expr)<br>
-(Let Id Expr Expr)<br>
-(Var Id)<br>
-(App Id (Listof Expr))<br>
-(Apply Id (Listof Expr) Expr)<br>
-Types<br>
-Id: Symbol<br>
-Op0: 'read-byte<br>
-Op1: 'add1 | 'sub1 | 'zero? | 'char? | 'integer->char | 'char->integer | 'write-byte | 'eof-object? | 'box | 'car | 'cdr | 'unbox | 'empty? | 'cons? | 'box? | 'vector? | vector-length | 'string? | string-length<br>
-Op2: '+ | '- | '< | '= | 'cons | 'eq? | 'make-vector | 'vector-ref | 'make-string | 'string-ref<br>
-Op3: 'vector-set!<br>
-
-## Example syntax
+## Examples
 
 ## cond
 (cond cond-clause ...) <br>
@@ -92,3 +62,35 @@ case-clause	 	=	 	[(datum ...) then-body ...+]<br>
 `      (list y x)))`<br>
 `'(5 2)`<br>
 
+## Abstract Syntax Tree (AST) Configuration
+
+Fun<br>
+(FunPlain [Listof Id] Expr)<br>
+(FunRest [Listof Id] Id Expr)<br>
+(FunCase [Listof FunCaseClause])<br>
+FunCaseClause<br>
+(FunPlain [Listof Id] Expr)<br>
+(FunRest [Listof Id] Id Expr)<br>
+Expr<br>
+(Eof)<br>
+(Empty)<br>
+(Int Integer)<br>
+(Bool Boolean)<br>
+(Char Character)<br>
+(Str String)<br>
+(Prim0 Op0)<br>
+(Prim1 Op1 Expr)<br>
+(Prim2 Op2 Expr Expr)<br>
+(Prim3 Op3 Expr Expr Expr)<br>
+(If Expr Expr Expr)<br>
+(Begin Expr Expr)<br>
+(Let Id Expr Expr)<br>
+(Var Id)<br>
+(App Id (Listof Expr))<br>
+(Apply Id (Listof Expr) Expr)<br>
+Types<br>
+Id: Symbol<br>
+Op0: 'read-byte<br>
+Op1: 'add1 | 'sub1 | 'zero? | 'char? | 'integer->char | 'char->integer | 'write-byte | 'eof-object? | 'box | 'car | 'cdr | 'unbox | 'empty? | 'cons? | 'box? | 'vector? | vector-length | 'string? | string-length<br>
+Op2: '+ | '- | '< | '= | 'cons | 'eq? | 'make-vector | 'vector-ref | 'make-string | 'string-ref<br>
+Op3: 'vector-set!<br>
